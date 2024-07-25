@@ -49,6 +49,8 @@ ALTER TABLE student
 ADD COLUMN percentage FLOAT;
 
 SELECT * FROM student;
+INSERT INTO student (student_Id, name, address, percentage, grade) VALUES ('1', 'Prakash', 'Jath', '78.4', 'A');
+INSERT INTO student(student_Id, name, address, percentage, grade) VALUES ('2', 'Nirav', 'Pune', '80.45', 'A');
 
 UPDATE student SET percentage = '36.66' WHERE student_id = 1;
 
