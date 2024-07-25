@@ -19,10 +19,10 @@ CREATE TABLE student (
     CONSTRAINT PRIMARY KEY pkey_student (student_id),
     CONSTRAINT FOREIGN KEY fkey_student_address_id (address_id) REFERENCES address(address_id)
 );
-INSERT INTO address (address_id, city) VALUES ('1', 'Jath');
-INSERT INTO address (address_id, city) VALUES ('2', 'pune');
-INSERT INTO address (address_id, city) VALUES ('3', 'sangli');
-INSERT INTO address (address_id, city) VALUES ('4', 'Kolhapur');
+INSERT INTO address(address_id, city) VALUES ('1', 'Jath');
+INSERT INTO address(address_id, city) VALUES ('2', 'pune');
+INSERT INTO address(address_id, city) VALUES ('3', 'sangli');
+INSERT INTO address(address_id, city) VALUES ('4', 'Kolhapur');
 INSERT INTO address(address_id, city) VALUES ('5', 'Mumbai');
 INSERT INTO address(address_id, city) VALUES ('6', 'pune');
 INSERT INTO address(address_id, city) VALUES ('7', 'Sankh');
