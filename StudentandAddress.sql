@@ -31,7 +31,7 @@ INSERT INTO address (address_id, city) VALUES ('9', 'Loni');
 INSERT INTO address(address_id, city) VALUES ('10', 'iindapur');
 
 UPDATE address
-SET city = 'Pune, Koregaon Park' 
+SET city = 'Surat' 
 WHERE address_id = 3;
 
 DELETE FROM address WHERE address_id = 3;
