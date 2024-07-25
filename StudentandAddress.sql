@@ -39,55 +39,8 @@ DELETE FROM address WHERE address_id = 3;
 DELETE FROM address;
 TRUNCATE table address;
 
-
-INSERT INTO student(student_id, name, address_id) VALUES (1, 'abc1', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (2, 'abc2', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (3, 'abc3', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (4, 'abc4', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (5, 'abc5', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (6, 'abc6', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (7, 'abc7', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (8, 'abc8', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (9, 'abc9', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (10, 'abc10', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (11, 'abc11', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (12, 'abc12', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (13, 'abc13', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (14, 'abc14', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (15, 'abc15', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (16, 'abc16', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (17, 'abc17', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (18, 'abc18', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (19, 'abc19', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (20, 'abc20', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (21, 'abc21', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (22, 'abc22', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (23, 'abc23', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (24, 'abc24', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (25, 'abc25', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (26, 'abc26', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (27, 'abc27', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (28, 'abc28', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (29, 'abc29', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (30, 'abc30', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (31, 'abc31', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (32, 'abc32', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (33, 'abc33', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (34, 'abc34', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (35, 'abc35', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (36, 'abc36', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (37, 'abc37', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (38, 'abc38', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (39, 'abc39', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (40, 'abc40', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (41, 'abc41', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (42, 'abc42', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (43, 'abc43', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (44, 'abc44', 4);
-INSERT INTO student(student_id, name, address_id) VALUES (45, 'abc45', 1);
-INSERT INTO student(student_id, name, address_id) VALUES (46, 'abc46', 2);
-INSERT INTO student(student_id, name, address_id) VALUES (47, 'abc47', 3);
-INSERT INTO student(student_id, name, address_id) VALUES (48, 'abc48', 4);
+ALTER TABLE student 
+CHANGE COLUMN student_Id INT NOT NULL ;
 
 
 SELECT * FROM student;
