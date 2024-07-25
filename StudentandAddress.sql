@@ -19,12 +19,16 @@ CREATE TABLE student (
     CONSTRAINT PRIMARY KEY pkey_student (student_id),
     CONSTRAINT FOREIGN KEY fkey_student_address_id (address_id) REFERENCES address(address_id)
 );
-
-INSERT INTO address (address_id, city) VALUES (1, 'Pune, Shivajinagar');
-
-INSERT INTO address (address_id, city) VALUES (2, 'Pune, Hadapsar');
-
-INSERT INTO address (address_id, city) VALUES (3, 'Pune, baner');
+INSERT INTO address (address_id, city) VALUES ('1', 'Jath');
+INSERT INTO address (address_id, city) VALUES ('2', 'pune');
+INSERT INTO address (address_id, city) VALUES ('3', 'sangli');
+INSERT INTO address (address_id, city) VALUES ('4', 'Kolhapur');
+INSERT INTO address(address_id, city) VALUES ('5', 'Mumbai');
+INSERT INTO address(address_id, city) VALUES ('6', 'pune');
+INSERT INTO address(address_id, city) VALUES ('7', 'Sankh');
+INSERT INTO address(address_id, city) VALUES ('8', 'kolkata');
+INSERT INTO address (address_id, city) VALUES ('9', 'Loni');
+INSERT INTO address(address_id, city) VALUES ('10', 'iindapur');
 
 UPDATE address
 SET city = 'Pune, Koregaon Park' 
