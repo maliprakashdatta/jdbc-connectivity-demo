@@ -92,7 +92,7 @@ public class AddressRepository {
 
             return rowsInserted > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Error closing connection: " + e.getMessage());
         }
         return false;
     }
