@@ -62,3 +62,12 @@ DROP COLUMN percentage;
 
 SELECT * FROM student;
 
+CREATE TABLE student (
+  studentId INT NOT NULL,
+  name VARCHAR(45) NULL,
+  address VARCHAR(45) NULL,
+  percentage FLOAT NULL,
+  grade VARCHAR(45) NULL,
+  PRIMARY KEY (`studentId`));
+
+
