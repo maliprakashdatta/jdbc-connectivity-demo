@@ -3,7 +3,6 @@ package com.swsa.repository;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
 import com.swsa.model.ATM_Card;
 import com.swsa.service.ConnectionService;
 
@@ -26,7 +25,7 @@ public class ATM_CardRepository
 
             // Your database operations here...
             Statement statement = connection.createStatement();
-            ResultSet ResultSet1 = statement.executeQuery("SELECT * FROM ATM_Card");
+            ResultSet ResultSet1 = statement.executeQuery("SELECT * FROM atm_card");
 
             // Iterate over the result set
             while (ResultSet1.next()) {
@@ -56,11 +55,61 @@ public class ATM_CardRepository
         return ATM_Card;
     }
 
+
+    // Method to insert user data into the database
+    public boolean insertCustomer(ATM_Card atmCard) throws SQLException {
+        this.initConnection();
+
+        String query = "INSERT INTO atm_card VALUES (?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+
+            preparedStatement.setInt(1,atmCard.getCard_id());
+            preparedStatement.setInt(2 ,atmCard.getCard_id());
+            preparedStatement.setInt(3,atmCard.getAccount_no());
+            preparedStatement.setString(4,atmCard.getCustomer_name());
+            preparedStatement.setInt(5,atmCard.getCvv());
+            preparedStatement.setString(6,atmCard.getCard_type());
+
+            System.out.println("inserting customer data to table: " + atmCard);
+
+            int rowsInserted = preparedStatement.executeUpdate();
+
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
+    // Method to update user data into the database
+    public boolean updateCustomer(ATM_Card atmCard) throws SQLException {
+        this.initConnection();
+
+        String query = "UPDATE atm_card SET   card_id= ?, card_no= ?, account_no = ?,customer_name = ?,cvv= ?,card_type= ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setInt(1,atmCard.getCard_id());
+            preparedStatement.setInt(2 ,atmCard.getCard_id());
+            preparedStatement.setInt(3,atmCard.getAccount_no());
+            preparedStatement.setString(4,atmCard.getCustomer_name());
+            preparedStatement.setInt(5,atmCard.getCvv());
+            preparedStatement.setString(6,atmCard.getCard_type());
+
+            System.out.println("updating customer data to table: " + atmCard);
+
+            int rowsInserted = preparedStatement.executeUpdate();
+
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
+
     // Method to update user data into the database
 
     public boolean insertStudent(ATM_Card atmCard) throws SQLException {
         this.initConnection();
-        String query = "INSERT INTO ATM_Card VALUES (?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO atm_card VALUES (?, ?, ?, ?, ?, ?)";
         try (PreparedStatement preparedStatement = connection. prepareStatement(query)) {
             preparedStatement.setInt(1,atmCard.getCard_id());
             preparedStatement.setInt(2 ,atmCard.getCard_id());
@@ -79,4 +128,23 @@ public class ATM_CardRepository
         }
         return false;
     }
+
+    // Method to delete user data into the database
+    public boolean deleteATM_Card(int Card_id) throws SQLException {
+        this.initConnection();
+
+        String query = "DELETE FROM atm_card WHERE id = ?";
+        try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setLong(1,Card_id);
+
+            System.out.println("deleting customer data from table: " + Card_id);
+
+            int rowsInserted = preparedStatement.executeUpdate();
+
+            return rowsInserted > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return false;
+}
 }
