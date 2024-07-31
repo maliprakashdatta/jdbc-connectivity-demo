@@ -133,7 +133,7 @@ public class ATM_CardRepository
     public boolean deleteATM_Card(int Card_id) throws SQLException {
         this.initConnection();
 
-        String query = "DELETE FROM atm_card WHERE id = ?";
+        String query = "DELETE FROM atm_card WHERE Card_id = ?";
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setLong(1,Card_id);
 
