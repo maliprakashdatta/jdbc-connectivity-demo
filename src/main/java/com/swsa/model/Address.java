@@ -1,6 +1,6 @@
-package org.example.model;
-
-public class Address {
+package com.swsa.model;
+public class Address
+{
 
     private int addressId;
     private String city;
@@ -21,6 +21,8 @@ public class Address {
         this.city = city;
     }
 
+    public Address() {
+    }
 
     public Address(int addressId, String city) {
         this.addressId = addressId;

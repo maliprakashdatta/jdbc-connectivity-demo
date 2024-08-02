@@ -1,14 +1,11 @@
-package org.example.model;
+package com.swsa.model;
 
-public class Student {
+public class Student  {
     private int studentId;
     private String name;
     private Address address;
     private float percentage;
     private String grade;
-
-    public Student(int studentId, String name, Address address, float percentage, String grade) {
-    }
 
     public int getStudentId() {
         return studentId;
@@ -50,5 +47,25 @@ public class Student {
         this.grade = grade;
     }
 
+    public Student() {
+    }
 
+    public Student(int studentId, String name, Address address, float percentage, String grade) {
+        this.studentId = studentId;
+        this.name = name;
+        this.address = address;
+        this.percentage = percentage;
+        this.grade = grade;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "studentId=" + studentId +
+                ", name='" + name + '\'' +
+                ", address=" + address +
+                ", percentage=" + percentage +
+                ", grade='" + grade + '\'' +
+                '}';
+    }
 }
